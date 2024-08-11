@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Header Section<<<<<<<<<<<<<<<<<<<<<< */
+header {
+    background-color: #74C69D;
+    width: 100%;
+    height: 90px;
+}
+
+.container {
+    width: 1180px;
+    height: auto;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.navItem {
+    list-style: none;
+    display: flex;
+}
+
+.navItem li {
+    margin: 18px 0px;
+}
+
+.navItem li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 30px;
+}
+.hamMenu i{
+    display: none;
+    color: white;
+}
+.hamMenu a{
+    text-decoration: none;    
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Content Section<<<<<<<<<<<<<<<<<<<<<< */
+.contentHead{
+    margin-top: 30px;
+    text-align: center;
+}
+.contentHead h2{
+    margin-top: 30px;
+}
+.contentHead p{
+    width: 270px;
+    margin: 10px auto;
+}
+.contentDown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+}
+input{
+    background-color: rgba(238, 238, 238, 1);
+    border: solid black 1px;
+    padding: 10px 150px;
+    margin: 10px;
+}
+textarea{
+    background-color: rgba(238, 238, 238, 1);
+    border: solid black 1px;
+    padding: 20px 150px;
+    margin: 10px;
+    resize: none;
+}
+button{
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 215px;
+    margin-top: 30px;
+}
+section img{
+    width: 500px;
+    height: 300px;
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>Footer Section<<<<<<<<<<<<<<<<<<<<<< */
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-top: 50px;
+    width: 100%;
+    height: 125px;
+    background-color: #74C69D;
+}
+
+.footerSection {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footerIconSection a{
+    margin: 0px 10px;
+    text-decoration: none;
+}
+.footerCopyright{
+    color: #fff;
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Mobile Device<<<<<<<<<<<<<<<<<<<<<<*/
+@media (max-width:480px) {
+    .container{
+        width: 100%;
+    }
+        /*>>>>>Mobile Header<<<<<*/
+    .hamMenu i{
+        display:block;
+        margin-top: 17px;
+    }
+    .navItemResponsive{
+        display: none;
+    }
+    /*>>>>>Mobile Content<<<<<*/
+    .samplesImg img {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        }
+    /*>>>>>Mobile Footer<<<<<*/
+    .footerSection{
+        flex-direction: column;
+    }
+    .footerCopyright{
+        margin-top: 10px;
+    }
+    section img{
+        margin-top: 60px;
+        width: 280px !important;
+        height: auto !important;
+    }
+    .contentDown{
+        flex-direction: column-reverse !important;
+        align-items: center;
+    }
+    footer {
+        position: static;
+    }
+
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Fablet Device<<<<<<<<<<<<<<<<<<<<<<*/
+@media (max-width:767px) {
+    .container{
+        width: 100%;
+    }
+    /*>>>>>Fablet Header<<<<<*/
+    .hamMenu i{
+        display:block;
+        margin-top: 17px;
+    }
+    .navItemResponsive{
+        display: none;
+    }
+    .contentDown{
+        flex-direction: column-reverse !important;
+        align-items: center;
+    }
+
+    /*>>>>>Fablet Footer<<<<<*/
+    .footerSection{
+        flex-direction: column;
+    }
+    .footerCopyright{
+        margin-top: 10px;
+    }
+    section img{
+        margin-top: 60px;
+    }
+    section img{
+        margin-top: 60px;
+        width: 400px;
+        height: 200px;
+    }
+    form{
+        align-items: center;
+    }
+    input{
+        background-color: rgba(238, 238, 238, 1);
+        border: solid black 1px;
+        padding: 10px 50px;
+        margin: 10px;
+    }
+    textarea{
+        background-color: rgba(238, 238, 238, 1);
+        border: solid black 1px;
+        padding: 20px 60px;
+        margin: 10px;
+        resize: none;
+    }
+    button{
+        background-color: black;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 13px 100px;
+        margin-top: 30px;
+    }
+    footer {
+        position: static;
+    }
+
+
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Tablet&iPad Device<<<<<<<<<<<<<<<<<<<<<<*/
+@media (max-width:1180px) {
+    .container{
+        width: 100%;
+    }
+    /*>>>>>Tablet&iPad Header<<<<<*/
+    nav{
+        padding:  20px !important;
+    }
+    /*>>>>>Tablet&iPad Footer<<<<<*/
+    .footerSection{
+        flex-direction: column;
+    }
+    .footerCopyright{
+        margin-top: 10px;
+    }
+    section img{
+        margin-top: 60px;
+    }
+
+
+}

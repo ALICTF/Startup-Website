@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Header Section<<<<<<<<<<<<<<<<<<<<<< */
+
+header {
+    background-color: #74C69D;
+    width: 100%;
+    height: 586px;
+}
+
+.container {
+    width: 1180px;
+    height: auto;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.navItem {
+    list-style: none;
+    display: flex;
+}
+
+.navItem li {
+    margin: 18px 0px;
+}
+
+.navItem li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 30px;
+}
+.hamMenu i{
+    display: none;
+    color: white;
+}
+.hamMenu a{
+    text-decoration: none;    
+}
+.headerDown {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.headerContent {
+    padding-right: 120px;
+}
+
+.headerContent {
+    color: #ffffff;
+}
+.headerContent p {
+    color: rgba(255, 255, 255, 0.75);
+}
+.headerContent .headerh1,
+.headerh3,
+.headerp {
+    padding: 10px 0;
+}
+
+.headerContent button {
+    padding: 13px 55px;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Content Section 1<<<<<<<<<<<<<<<<<<<<<<*/
+
+.Section1 {
+    margin-top: 40px;
+}
+
+.logoSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.buttonSectionDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttonSection {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 55px;
+    margin-top: 50px;
+}
+
+.section1Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section1Content .sectionh2 {
+    margin-top: 20px;
+}
+
+.section1Content .sectionp {
+    margin-top: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.sectionh4 {
+    color: #74C69D;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Content Section 2 & 3<<<<<<<<<<<<<<<<<<<<<<*/
+
+.Section2 {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+.Section3 {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.Section2content {
+    padding: 0 60px;
+}
+
+.Section2content {
+    margin-top: 10px;
+}
+
+.section2p {
+    margin-top: 15px;
+    color:rgba(33, 37, 41, 0.5);
+}
+
+.buttonSection2 {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 55px;
+    margin-top: 30px;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Cards<<<<<<<<<<<<<<<<<<<<<<*/
+.cardSection {
+    margin-top: 80px;
+}
+
+.cardh4 {
+    color: #74C69D;
+}
+
+.buttonCard {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 55px;
+    margin-top: 30px;
+}
+
+.cardinner {
+    width: 252px;
+    height: 299px;
+    margin: 40px 10px;
+    box-shadow: 5px 5px 10px #bebebe,
+        -5px -5px 10px #ffffff;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cardimginner {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cardContentInner {
+    margin: 15px 15px;
+}
+
+.cardContentInner p {
+    margin: 30px 0px;
+    font-size: smaller;
+}
+
+.cardContent {
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.cardContent p {
+    margin-top: 10px;
+}
+
+.cardContent h2 {
+    margin-top: 20px;
+}
+
+.cardSectionButton {
+    display: flex;
+    justify-content: center;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Footer<<<<<<<<<<<<<<<<<<<<<<*/
+footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 125px;
+    background-color: #74C69D;
+}
+
+.footerSection {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footerIconSection a{
+    margin: 0px 10px;
+    text-decoration: none;
+}
+.footerCopyright{
+    color: #fff;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Mobile Device<<<<<<<<<<<<<<<<<<<<<<*/
+@media (max-width:480px) {
+    .container{
+        width: 100%;
+    }
+    /*>>>>>Mobile Header Section<<<<<*/
+    header{
+        width: 100%;
+        height: auto;
+    }
+    .logoResponsive{
+        width: 70%;
+        height: 90%;
+    }
+    nav{
+        padding:  20px;
+    }
+    .navItemResponsive{
+        display: none;
+    }
+    .headerDown{
+        margin-top: 0px;
+        flex-direction: column-reverse;
+    }
+    .headerDown img {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+    .headerContent{
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    .hamMenu i{
+    display:block;
+    margin-top: 17px;
+    }
+    /*>>>>>Mobile Content Section1<<<<<*/
+    .Section1{
+        margin-top: 20px;
+    }
+    .sectionp {
+        width: 50% !important;
+    }
+    .logoSection{
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .logoSection a{
+        margin: 15px 0;
+    }
+    .buttonSection{
+        margin-top: 20px;
+    }
+    /*>>>>>Mobile Content Section2<<<<<*/
+    .Section2{
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .Section2 div img {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+    .Section2content{
+        padding: 20px;
+    }
+    /*>>>>>Mobile Content Section3<<<<<*/
+    .Section3{
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+    .Section3 div img {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+    /*>>>>>Mobile Card Section<<<<<*/
+    .cardSection{
+        margin-top: 20px;
+    }
+    .cardContent{
+        width: 70% !important;
+    }
+    .card{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .cardinner{
+        margin: 10px;
+    }
+    /*>>>>>Mobile Footer<<<<<*/
+    .footerSection{
+        flex-direction: column;
+    }
+    .footerCopyright{
+        margin-top: 10px;
+    }
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Fablet Device<<<<<<<<<<<<<<<<<<<<<<*/
+@media (max-width:767px) {
+    .container{
+        width: 100%;
+    }
+    /*>>>>>Fablet Header Section<<<<<*/
+    header{
+        width: 100%;
+        height: auto;
+    }
+    .logoResponsive{
+        width: 70%;
+        height: 90%;
+    }
+    nav{
+        padding:  20px;
+    }
+    .navItemResponsive{
+        display: none;
+    }
+    .headerDown{
+        margin-top: 0px;
+        flex-direction: column-reverse;
+    }
+    .headerDown img {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+    .headerContent{
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    .hamMenu i{
+    display:block;
+    margin-top: 17px;
+    }
+    .headerDown img {
+        width:300px ;
+        height: 250px;
+        margin-right: 10px;
+    }
+    nav{
+        padding:  20px;
+    }
+    .headerContent{
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    /*>>>>>Fablet Content Section1<<<<<*/
+    .logoSection{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .logoSection a{
+        padding: 20px;
+    }
+    .buttonSection{
+        margin-top: 0px;
+    }
+    /*>>>>>Fablet Content Section2<<<<<*/
+    .Section2{
+        margin-top: 20px;
+        
+    }
+    .Section2 div img {
+        width: 300px !important;
+        height: 250px !important;
+        padding: 20px;
+    }
+    .Section2content{
+        padding: 20px;
+    }
+    /*>>>>>Fablet Content Section3<<<<<*/
+    .Section3{
+        margin-top: 20px;
+    }
+    .Section3 div img {
+        width:300px !important ;
+        height: 300px !important;
+        padding: 20px;
+    }
+    /*>>>>>Fablet Card Section<<<<<*/
+    .cardSection{
+        margin-top: 20px;
+    }
+    .card{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cardinner{
+        margin: 10px;
+    }
+    /*>>>>>Fablet Footer<<<<<*/
+    .footerSection{
+        flex-direction: column;
+    }
+    .footerCopyright{
+        margin-top: 10px;
+    }
+
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Tablet&iPad Device<<<<<<<<<<<<<<<<<<<<<<*/
+@media (max-width:1024px) {
+    .container{
+        width: 100%;
+    }
+    /*>>>>>Tablet&iPad Header Section<<<<<*/
+    .headerDown img {
+        width:360px ;
+        height: 250px;
+        margin-right: 10px;
+    }
+    nav{
+        padding:  20px;
+    }
+    .headerContent{
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    /*>>>>>Tablet&iPad Content Section1<<<<<*/
+    .logoSection{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .logoSection a{
+        padding: 20px;
+    }
+    .buttonSection{
+        margin-top: 0px;
+    }
+    /*>>>>>Tablet&iPad Content Section2<<<<<*/
+    .Section2{
+        margin-top: 20px;
+        
+    }
+    .Section2 div img {
+        width:360px ;
+        height: 290px;
+        padding: 20px;
+    }
+    .Section2content{
+        padding: 20px;
+    }
+    /*>>>>>Tablet&iPad Content Section3<<<<<*/
+    .Section3{
+        margin-top: 20px;
+    }
+    .Section3 div img {
+        width:360px ;
+        height: 350px;
+        padding: 20px;
+    }
+    /*>>>>>Tablet&iPad Card Section<<<<<*/
+    .cardSection{
+        margin-top: 20px;
+    }
+    .card{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cardinner{
+        margin: 10px;
+    }
+    /*>>>>>Tablet&iPad Footer<<<<<*/
+    .footerSection{
+        flex-direction: column;
+    }
+    .footerCopyright{
+        margin-top: 10px;
+    }
+
+}
+/*>>>>>>>img resizing<<<<<*/
+@media (max-width:360px){
+    header img{
+        width: 250px !important;
+        height: 100% !important;
+    }
+    .Section2 div img{
+        width: 250px !important;
+        height: 100% !important;
+    }
+    .Section3 div img{
+        width: 250px !important;
+        height: 100% !important;
+    }
+}
