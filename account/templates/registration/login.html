@@ -14,7 +14,7 @@
                             <i></i>
                             <i></i>
                             <p>or use your account</p>
-                            <form action="index.html" method="POST">
+                            <form action="{% url 'account:login' %}" method="POST">
                                 <input type="text" placeholder="Username" name="username">
                                 <input type="password" placeholder="password" name="password">
                                 <a href="#"><p>Forgot your password ?</p></a>

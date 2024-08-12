@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Portfolio
+
+@admin.register(Portfolio)
+class Portfolio(admin.ModelAdmin):
+    list_display = ['name']
+    list_per_page = 20
