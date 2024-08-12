@@ -7,6 +7,7 @@ body{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 /*>>>>>>>>>>>>>>>>>>>>>>>Header Section<<<<<<<<<<<<<<<<<<<<<< */
+
 header {
     background-color: #74C69D;
     width: 100%;
@@ -48,61 +49,54 @@ nav {
 }
 
 /*>>>>>>>>>>>>>>>>>>>>>>>Content Section<<<<<<<<<<<<<<<<<<<<<< */
-.contentHead{
-    margin-top: 30px;
-    text-align: center;
-}
-.contentHead h2{
-    margin-top: 30px;
-}
-.contentHead p{
-    width: 270px;
-    margin: 10px auto;
-}
-.contentDown{
+.loginContainer{
+    margin: 40px auto;
+    width: 80%;
+    height: 613px;
+    border: 1px solid #74C69D;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    align-items: flex-end;
-    flex-wrap: wrap;
-
+    border-radius: 10px;
+}
+.leftSide{
+    border-radius: 10px 0px 0px 10px;
+    background-color: #74C69D;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.leftSide p ,h2{
+    text-align: center;
 }
 form{
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    align-items: baseline;
+}
+form input , p,button{
+    margin: 10px 0px;
 }
 input{
-    background-color: rgba(238, 238, 238, 1);
-    border: solid black 1px;
-    padding: 10px 150px;
-    margin: 10px;
+    width: 100%;
+    padding: 10px 60px;
 }
-textarea{
-    background-color: rgba(238, 238, 238, 1);
-    border: solid black 1px;
-    padding: 20px 150px;
-    margin: 10px;
-    resize: none;
+.rightSide{
+    border-radius: 0px 10px 10px 0px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    height: 100%;
 }
-button{
-    background-color: black;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 13px 215px;
-    margin-top: 30px;
-}
-section img{
-    width: 500px;
-    height: 300px;
-}
-/*>>>>>>>>>>>>>>>>>>>>>>>Footer Section<<<<<<<<<<<<<<<<<<<<<< */
+
+/*>>>>>>>>>>>>>>>>>>>>>>>Footer Section<<<<<<<<<<<<<<<<<<<<<<*/
 footer {
-    position: fixed;
-    bottom: 0;
     margin-top: 50px;
     width: 100%;
     height: 125px;
@@ -121,7 +115,8 @@ footer {
 }
 .footerCopyright{
     color: #fff;
-}
+}    
+
 /*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Mobile Device<<<<<<<<<<<<<<<<<<<<<<*/
 @media (max-width:480px) {
     .container{
@@ -148,18 +143,7 @@ footer {
     .footerCopyright{
         margin-top: 10px;
     }
-    section img{
-        margin-top: 60px;
-        width: 280px !important;
-        height: auto !important;
-    }
-    .contentDown{
-        flex-direction: column-reverse !important;
-        align-items: center;
-    }
-    footer {
-        position: static;
-    }
+
 
 }
 
@@ -176,10 +160,6 @@ footer {
     .navItemResponsive{
         display: none;
     }
-    .contentDown{
-        flex-direction: column-reverse !important;
-        align-items: center;
-    }
 
     /*>>>>>Fablet Footer<<<<<*/
     .footerSection{
@@ -188,43 +168,6 @@ footer {
     .footerCopyright{
         margin-top: 10px;
     }
-    section img{
-        margin-top: 60px;
-    }
-    section img{
-        margin-top: 60px;
-        width: 400px;
-        height: 200px;
-    }
-    form{
-        align-items: center;
-    }
-    input{
-        background-color: rgba(238, 238, 238, 1);
-        border: solid black 1px;
-        padding: 10px 50px;
-        margin: 10px;
-    }
-    textarea{
-        background-color: rgba(238, 238, 238, 1);
-        border: solid black 1px;
-        padding: 20px 60px;
-        margin: 10px;
-        resize: none;
-    }
-    button{
-        background-color: black;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 13px 100px;
-        margin-top: 30px;
-    }
-    footer {
-        position: static;
-    }
-
 
 }
 /*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Tablet&iPad Device<<<<<<<<<<<<<<<<<<<<<<*/
@@ -243,9 +186,5 @@ footer {
     .footerCopyright{
         margin-top: 10px;
     }
-    section img{
-        margin-top: 60px;
-    }
-
 
 }

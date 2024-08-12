@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/portfolio.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/css/all.min.css">
-    <title>Portfolio</title>
+    <title>Signup/Login</title>
 </head>
 <body>
 
@@ -22,7 +22,6 @@
                         <div class="hamMenu"><a href="#"><i class="fa-solid fa-bars fa-2xl"></i></a></div>
                         <div class="navItemResponsive">
                             <ul class="navItem">
-                                <li><a href="./login.html">Signup/login</a></li>
                                 <li><a href="./contact.html">contact</a></li>
                                 <li><a href="./services.html">Services</a></li>
                                 <li><a href="#">Portfolio</a></li>
@@ -37,22 +36,27 @@
     <!-- Content Section -->
     <section>
         <div class="container">
-            <div class="sampleContent">
-                <h2 >Portfolio</h2>
-                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="samplesImg">
-                <img src="./assets/img/img1.png" alt="sample1">
-                <img src="./assets/img/img2.png" alt="sample2">
-                <img src="./assets/img/img3.png" alt="sample3">
-                <img src="./assets/img/img4.png" alt="sample4">
-                <img src="./assets/img/img5.png" alt="sample5">
-                <img src="./assets/img/img6.png" alt="sample6">
-                <img src="./assets/img/img8.png" alt="sample7">
-                <img src="./assets/img/img7.png" alt="sample8">
-            </div>
-            <div class="buttonSectionDiv">
-                <button class="buttonSection">Learn More</button>
+            <div class="loginContainer">
+                <div class="leftSide">
+                    <h2>Sign in with :</h2>
+                    <div class="SVGs">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <p>or use your account</p>
+                        <form action="index.html" method="post">
+                            <input type="email" placeholder="Email" >
+                            <input type="password" placeholder="password">
+                            <a href="#"><p>Forgot your password ?</p></a>
+                            <button type="submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="rightSide">
+                    <h2>Hello, Freind!</h2>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button type="submit">Sign up</button>
+                </div>
             </div>
         </div>
     </section>
