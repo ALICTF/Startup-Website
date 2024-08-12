@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 {% block content %}
@@ -13,11 +14,11 @@
                 </div>
                 <div>
                     <div class="logoSection">
-                        <a href="#"><img src="./assets/img/googleLogo.png" alt="googlelogo"></a>
-                        <a href="#"><img src="./assets/img/microsoftLogo.png" alt="microsoftlogo"></a>
-                        <a href="#"><img src="./assets/img/airbnbLogo.png" alt="airbnblogo"></a>
-                        <a href="#"><img src="./assets/img/facebookLogo.png" alt="facebooklogo"></a>
-                        <a href="#"><img src="./assets/img/spotifyLogo.png" alt="spotifylogo"></a>
+                        <a href="#"><img src="{% static 'img/googleLogo.png' %}" alt="googlelogo"></a>
+                        <a href="#"><img src="{% static 'img/microsoftLogo.png' %}" alt="microsoftlogo"></a>
+                        <a href="#"><img src="{% static 'img/airbnbLogo.png' %}" alt="airbnblogo"></a>
+                        <a href="#"><img src="{% static 'img/facebookLogo.png' %}" alt="facebooklogo"></a>
+                        <a href="#"><img src="{% static 'img/spotifyLogo.png' %}" alt="spotifylogo"></a>
                     </div>
                     <div class="buttonSectionDiv">
                         <button class="buttonSection">Learn More</button>
@@ -32,7 +33,7 @@
         <div class="container">
             <div class="Section2">
                 <div>
-                    <img src="./assets/img/Section2img.png" alt="groupPic2" width="500px" height="350px">
+                    <img src="{% static 'img/Section2img.png' %}" alt="groupPic2" width="500px" height="350px">
                 </div>
                 <div class="Section2content">
                     <h2 class="section2h2">Lorem ipsum dolor sit amet consectetur</h2>
@@ -58,7 +59,7 @@
                     <button class="buttonSection2">Learn More</button>
                 </div>
                 <div>
-                    <img src="./assets/img/Section3img.png" alt="groupPic2" width="500px" height="450px">
+                    <img src="{% static 'img/Section3img.png' %}" alt="groupPic2" width="500px" height="450px">
                 </div>
             </div>
         </div>
@@ -77,7 +78,7 @@
                 <div class="card">
                     <div class="cardinner">
                         <div class="cardimginner">
-                            <img class="imginnercard" src="./assets/img/card1.png" alt="card1">
+                            <img class="imginnercard" src="{% static 'img/card1.png' %}" alt="card1">
                         </div>
                         <div class="cardContentInner">
                             <h4>Peg Legge</h4>
@@ -86,7 +87,7 @@
                     </div>
                     <div class="cardinner">
                         <div class="cardimginner">
-                            <img src="./assets/img/card2.png" alt="card2">
+                            <img src="{% static 'img/card2.png' %}" alt="card2">
                         </div>
                         <div class="cardContentInner">
                             <h4>Richarrd Guerra</h4>
@@ -95,7 +96,7 @@
                     </div>
                     <div class="cardinner">
                         <div class="cardimginner">
-                            <img src="./assets/img/card3.png" alt="card3">
+                            <img src="{% static 'img/card3.png' %}" alt="card3">
                         </div>
                         <div class="cardContentInner">
                             <h4>Alexandra Stolz</h4>
@@ -104,7 +105,7 @@
                     </div>
                     <div class="cardinner">
                         <div class="cardimginner">
-                            <img src="./assets/img/card4.png" alt="card4">
+                            <img src="{% static 'img/card4.png' %}" alt="card4">
                         </div>
                         <div class="cardContentInner">
                             <h4>Janet Bray</h4>

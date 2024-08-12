@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+        <!-- Content Section -->
+        <section>
+            <div class="container">
+                <div class="loginContainer">
+                    <div class="leftSide">
+                        <h2>Sign in with :</h2>
+                        <div class="SVGs">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <p>or use your account</p>
+                            <form action="index.html" method="POST">
+                                <input type="text" placeholder="Username" name="username">
+                                <input type="password" placeholder="password" name="password">
+                                <a href="#"><p>Forgot your password ?</p></a>
+                                <button type="submit">Sign in</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="rightSide">
+                        <h2>Hello, Freind!</h2>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button type="submit">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- Content Section -->
+    <section>
+        <div class="container">
+            <div class="sampleContent">
+                <h2 >Portfolio</h2>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="samplesImg">
+                <img src="{% static 'img/img1.png' %}" alt="sample1">
+                <img src="{% static 'img/img2.png' %}" alt="sample2">
+                <img src="{% static 'img/img3.png' %}" alt="sample3">
+                <img src="{% static 'img/img4.png' %}" alt="sample4">
+                <img src="{% static 'img/img5.png' %}" alt="sample5">
+                <img src="{% static 'img/img6.png' %}" alt="sample6">
+                <img src="{% static 'img/img8.png' %}" alt="sample7">
+                <img src="{% static 'img/img7.png' %}" alt="sample8">
+            </div>
+            <div class="buttonSectionDiv">
+                <button class="buttonSection">Learn More</button>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,7 +1,40 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <title>Contact Us</title>
+</head>
+<body>
 
-
-{% block content %}
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div>
+                    <nav>
+                        <div>
+                            <a href="#">
+                                <img class="logoResponsive" src="{% static 'img/Logo.png' %}" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="hamMenu"><a href="#"><i class="fa-solid fa-bars fa-2xl"></i></a></div>
+                        <div class="navItemResponsive">
+                            <ul class="navItem">
+                                <li><a href="./login.html">Signup/login</a></li>
+                                <li><a href="{% url 'page:contact' %}">contact</a></li>
+                                <li><a href="./services.html">Services</a></li>
+                                <li><a href="./portfolio.html">Portfolio</a></li>
+                                <li><a href="{% url 'page:home' %}">Home</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+            </div>
+        </div>
+    </header>
+    
     <!-- Content Section -->
     <section>
         <div class="container">
@@ -22,9 +55,12 @@
                     </form>
                 </div>
                 <div>
-                    <img src="./assets/img/map.png" alt="">
+                    <img src="{% static 'img/map.png' %}" alt="">
                 </div>
             </div>
         </div>
     </section>
-{% endblock %}
+
+    {% include 'partials/__footer__.html' %}
+</body>
+</html>
