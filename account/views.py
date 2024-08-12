@@ -40,9 +40,9 @@ class Signup( CreateView):
     success_message = 'Your Are Register'
 
 
-# def logout(request):
-    # if request.user.is_authenticated:
-    #     auth.logout(request)
-    #     messages.success(request, 'You are logout')
-    # return redirect('login')
+def logout(request):
+    if request.user.is_authenticated:
+        auth.logout(request)
+        messages.success(request, 'You are logout')
+    return redirect('login')
 

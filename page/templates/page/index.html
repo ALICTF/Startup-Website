@@ -1,8 +1,58 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
 {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <title>Startup Website</title>
+</head>
+<body>
 
-
-{% block content %}
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div>
+                <div>
+                    <nav>
+                        <div>
+                            <a href="#">
+                                <img class="logoResponsive" src="{% static 'img/Logo.png' %}" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="hamMenu"><a href="{% url 'page:home' %}"><i class="fa-solid fa-bars fa-2xl"></i></a></div>
+                        <div class="navItemResponsive">
+                            <ul class="navItem">
+                                {% if user.is_authenticated %}
+                                <li><a href="{% url 'account:logout' %}">Logout</a>|{{ user.username }}</li>
+                                {% else %}
+                                <li><a href="{% url 'account:login' %}">login</a><a href="{% url 'account:signup' %}">Signup</a></li>
+                                {% endif %}
+                                <li><a href="{% url 'page:contact' %}">contact</a></li>
+                                <li><a href="{% url 'page:services' %}">Services</a></li>
+                                <li><a href="{% url 'page:portfolio' %}">Portfolio</a></li>
+                                <li><a href="{% url 'page:home' %}">Home</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="headerDown">
+                    <div class="headerContent">
+                        <h3 class="headerh3">Welcome</h3>
+                        <h1 class="headerh1">Lorem ipsum dolor sit amet consectetur</h1>
+                        <p class="headerp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic
+                            quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus
+                            iste?</p>
+                        <button>Explore</button>
+                    </div>
+                    <div>
+                        <img src="{% static 'img/headerPic.png' %}" alt="groupPic" width="550px" height="350px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- Content Section 1 -->
     <section>
         <div class="container">
@@ -119,5 +169,6 @@
             </div>
         </div>
     </section>
-{% endblock %}
+
+{% include 'partials/__footer__.html' %}
 
