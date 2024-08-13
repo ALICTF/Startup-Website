@@ -8,7 +8,7 @@ class SortByDateTime(models.Manager):
 
 class Portfolio(models.Model):
     name = models.CharField(max_length=255)
-    # image = models.ImageField(upload_to='cover/portfolio/')
+    image = models.ImageField(upload_to='cover/portfolio/')
 
     objects = SortByDateTime()
     
