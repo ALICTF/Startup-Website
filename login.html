@@ -55,8 +55,8 @@
                 </div>
                 <div class="rightSide">
                     <h2>Hello, Freind!</h2>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button type="submit">Sign up</button>
+                    <p>dont have any account ? </p>
+                    <button type="submit" id="myBtn">Sign up</button>
                 </div>
             </div>
         </div>
@@ -95,5 +95,31 @@
             </div>
         </div>
     </footer>
+    <!-- Modal -->
+    <section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modalHeader">
+                    <h3>Sign up</h3>
+                    <span class="close">&times;</span>
+                </div>
+            <form action="./login.html" method="post">
+                    <input type="text" placeholder="Enter Your Username" >
+                    <input type="email" placeholder="Enter Your Email" >
+                    <input type="password" placeholder="Enter Your password">
+                    <input type="password" placeholder="Repeat Your password">
+                    <p>select your gender :</p>
+                    <div class="genderDiv">                    
+                        <label for="genderM">Male</label>
+                        <input type="radio" name="gender" id="genderM">
+                        <label for="genderF">Female</label>
+                        <input type="radio" name="gender" id="genderF">
+                    </div> 
+                    <button type="submit">Sign in</button>
+            </form>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/JS/index.js"></script>
 </body>
 </html>

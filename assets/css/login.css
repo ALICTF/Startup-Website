@@ -3,9 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 /*>>>>>>>>>>>>>>>>>>>>>>>Header Section<<<<<<<<<<<<<<<<<<<<<< */
 
 header {
@@ -40,16 +42,18 @@ nav {
     color: #fff;
     margin: 0 30px;
 }
-.hamMenu i{
+
+.hamMenu i {
     display: none;
     color: white;
 }
-.hamMenu a{
-    text-decoration: none;    
+
+.hamMenu a {
+    text-decoration: none;
 }
 
 /*>>>>>>>>>>>>>>>>>>>>>>>Content Section<<<<<<<<<<<<<<<<<<<<<< */
-.loginContainer{
+.loginContainer {
     margin: 40px auto;
     width: 80%;
     height: 613.4px;
@@ -59,9 +63,10 @@ nav {
     justify-content: center;
     border-radius: 30px;
     box-shadow: 10px 5px 10px #bebebe,
-    -5px -5px 10px #ffffff;
+        -5px -5px 10px #ffffff;
 }
-.leftSide{
+
+.leftSide {
     border-radius: 30px 0px 0px 30px;
     background-color: #74C69D;
     height: 100%;
@@ -71,40 +76,54 @@ nav {
     justify-content: center;
     flex-direction: column;
 }
-.leftSide p ,h2{
+
+.leftSide p,
+h2 {
     text-align: center;
     color: #fff;
 }
-.rightSide h2,p{
+
+.rightSide h2,
+p {
     text-align: center;
 }
+
 .rightSide h2 {
     color: #74C69D;
 }
-form{
+
+form {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-form input , p,button{
+
+form input,
+p,
+button {
     margin: 10px 0px;
 }
-a{
+
+a {
     text-decoration: none;
     color: #fff;
 }
-input{
+
+input {
     width: 100%;
     padding: 10px 40px;
     border-radius: 30px;
     border: 1px solid rgb(124, 124, 124);
 }
-input:focus{
-    border: 1px solid rgb(124, 124, 124);
+
+input:focus {
+    border: 1px solid rgb(23, 210, 10);
     color: #fff;
-    background-color: #98af9d;
+    background-color: #e6e7e6;
+    outline: none;
 }
-.rightSide{
+
+.rightSide {
     border-radius: 0px 30px 30px 0px;
     flex-direction: column;
     display: flex;
@@ -114,7 +133,8 @@ input:focus{
     background-color: #fff;
     height: 100%;
 }
-.leftSide button{
+
+.leftSide button {
     background-color: rgb(255, 255, 255);
     color: #000000;
     border: none;
@@ -122,25 +142,34 @@ input:focus{
     cursor: pointer;
     padding: 13px 25px;
 }
-.leftSide button:active{
+
+.leftSide button:active {
     background-color: rgb(0, 0, 0);
     color: #ffffff;
 
 }
-.rightSide button:active{
+
+.rightSide button:active {
     background-color: rgb(0, 0, 0);
     color: #ffffff;
 
 }
-.rightSide button{
-        background-color: #74C69D;
-        color: #fff;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        padding: 13px 25px;
-}
 
+.rightSide button {
+    background-color: #74C69D;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 13px 25px;
+}
+.genderDiv{
+    display: flex;
+    align-items: center;
+}
+.genderDiv input{
+    margin: 0 10px;
+}
 /*>>>>>>>>>>>>>>>>>>>>>>>Footer Section<<<<<<<<<<<<<<<<<<<<<<*/
 footer {
     margin-top: 50px;
@@ -155,39 +184,45 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
-.footerIconSection a{
+
+.footerIconSection a {
     margin: 0px 10px;
     text-decoration: none;
 }
-.footerCopyright{
+
+.footerCopyright {
     color: #fff;
-}    
+}
 
 /*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Mobile Device<<<<<<<<<<<<<<<<<<<<<<*/
 @media (max-width:480px) {
-    .container{
+    .container {
         width: 100%;
     }
-        /*>>>>>Mobile Header<<<<<*/
-    .hamMenu i{
-        display:block;
+
+    /*>>>>>Mobile Header<<<<<*/
+    .hamMenu i {
+        display: block;
         margin-top: 17px;
     }
-    .navItemResponsive{
+
+    .navItemResponsive {
         display: none;
     }
+
     /*>>>>>Mobile Content<<<<<*/
     .samplesImg img {
         width: 100%;
         height: auto;
         padding: 20px 10px;
-        }
+    }
 
     /*>>>>>Mobile Footer<<<<<*/
-    .footerSection{
+    .footerSection {
         flex-direction: column;
     }
-    .footerCopyright{
+
+    .footerCopyright {
         margin-top: 10px;
     }
 
@@ -196,58 +231,122 @@ footer {
 
 /*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Fablet Device<<<<<<<<<<<<<<<<<<<<<<*/
 @media (max-width:767px) {
-    .container{
+    .container {
         width: 100%;
     }
+
     /*>>>>>Fablet Header<<<<<*/
-    .hamMenu i{
-        display:block;
+    .hamMenu i {
+        display: block;
         margin-top: 17px;
     }
-    .navItemResponsive{
+
+    .navItemResponsive {
         display: none;
     }
 
-    .loginContainer{
+    .loginContainer {
         margin: 40px auto;
         width: 80%;
         height: 613.4px;
         flex-direction: column;
     }
-    .leftSide{
+
+    .leftSide {
         border-radius: 30px 30px 0px 0px;
     }
-    .rightSide{
+
+    .rightSide {
         border-radius: 0px 0px 30px 30px;
     }
-    
+
     /*>>>>>Fablet Footer<<<<<*/
-    .footerSection{
+    .footerSection {
         flex-direction: column;
     }
-    .footerCopyright{
+
+    .footerCopyright {
         margin-top: 10px;
     }
 
 }
+
 /*>>>>>>>>>>>>>>>>>>>>>>>Responsive For Tablet&iPad Device<<<<<<<<<<<<<<<<<<<<<<*/
 @media (max-width:1180px) {
-    .container{
+    .container {
         width: 100%;
     }
+
     /*>>>>>Tablet&iPad Header<<<<<*/
-    nav{
-        padding:  20px !important;
+    nav {
+        padding: 20px !important;
     }
+
     .navItem li a {
         margin: 0 10px;
     }
+
     /*>>>>>Tablet&iPad Footer<<<<<*/
-    .footerSection{
+    .footerSection {
         flex-direction: column;
     }
-    .footerCopyright{
+
+    .footerCopyright {
         margin-top: 10px;
     }
+}
 
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 10px 5px 10px #535252,
+    -5px -5px 10px #7b7a7a;
+    border-radius: 20px;
+}
+/* The Close Button */
+.close {
+    color: #ff0000;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: -10px 0px 10px 0px;
+}
+.modal-content input{
+    width: 70%;
+}
+.modal-content button{
+    background-color: #74C69D;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 13px 25px;
 }
