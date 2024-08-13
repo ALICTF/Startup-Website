@@ -18,6 +18,8 @@ class CustomUser(AbstractUser):
         return self.username
     
     def save(self, *args, **kwargs):
+        if self.first_name == '':
+            self.first_name = self.username
         if self.image == '':
             if self.gender == 'M':
                 self.image = random.choice(['defualt/card2.png', 'defualt/card4.png'])

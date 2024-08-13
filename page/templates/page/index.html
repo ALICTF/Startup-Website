@@ -126,42 +126,17 @@
                         odio vero.</p>
                 </div>
                 <div class="card">
+                    {% for team in teams %}
                     <div class="cardinner">
                         <div class="cardimginner">
-                            <img class="imginnercard" src="{% static 'img/card1.png' %}" alt="card1">
+                            <img class="imginnercard" src="{{ team.image.url }}" alt="card1">
                         </div>
                         <div class="cardContentInner">
-                            <h4>Peg Legge</h4>
-                            <p>CEO</p>
+                            <h4>{{ team.get_full_name|title }}</h4>
+                            <p>{{ team.job }}</p>
                         </div>
                     </div>
-                    <div class="cardinner">
-                        <div class="cardimginner">
-                            <img src="{% static 'img/card2.png' %}" alt="card2">
-                        </div>
-                        <div class="cardContentInner">
-                            <h4>Richarrd Guerra</h4>
-                            <p>CTO</p>
-                        </div>
-                    </div>
-                    <div class="cardinner">
-                        <div class="cardimginner">
-                            <img src="{% static 'img/card3.png' %}" alt="card3">
-                        </div>
-                        <div class="cardContentInner">
-                            <h4>Alexandra Stolz</h4>
-                            <p>DESIGNER</p>
-                        </div>
-                    </div>
-                    <div class="cardinner">
-                        <div class="cardimginner">
-                            <img src="{% static 'img/card4.png' %}" alt="card4">
-                        </div>
-                        <div class="cardContentInner">
-                            <h4>Janet Bray</h4>
-                            <p>DEVELOPER</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="cardSectionButton">
                     <button class="buttonCard">View Team</button>
@@ -172,3 +147,5 @@
 
 {% include 'partials/__footer__.html' %}
 
+</body>
+</html>
