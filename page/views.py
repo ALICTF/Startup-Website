@@ -9,8 +9,12 @@ def index(request):
 
 
 def portfolio(request):
+    portfolio = Portfolio.objects.all()
+    context = {
+        'portfolio': portfolio
+    }
     
-    return render(request, 'page/portfolio.html')
+    return render(request, 'page/portfolio.html', context)
 
 
 def services(request):

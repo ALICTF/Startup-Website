@@ -17,7 +17,7 @@
                 <div>
                     <nav>
                         <div>
-                            <a href="#">
+                            <a href="{% url 'page:home' %}">
                                 <img class="logoResponsive" src="{% static 'img/Logo.png' %}" alt="Logo">
                             </a>
                         </div>
@@ -25,7 +25,7 @@
                         <div class="navItemResponsive">
                             <ul class="navItem">
                                 {% if user.is_authenticated %}
-                                <li><a href="{% url 'account:logout' %}">Logout</a>|{{ user.username }}</li>
+                                <li><a href="{% url 'account:logout' %}">Logout</a><a href="{% url 'admin:login' %}">{{ user }}</a></li>
                                 {% else %}
                                 <li><a href="{% url 'account:login' %}">login</a><a href="{% url 'account:signup' %}">Signup</a></li>
                                 {% endif %}
@@ -64,9 +64,9 @@
                 </div>
                 <div>
                     <div class="logoSection">
-                        <a href="#"><img src="{% static 'img/googleLogo.png' %}" alt="googlelogo"></a>
-                        <a href="#"><img src="{% static 'img/microsoftLogo.png' %}" alt="microsoftlogo"></a>
-                        <a href="#"><img src="{% static 'img/airbnbLogo.png' %}" alt="airbnblogo"></a>
+                        <a href="https://www.google.com/"><img src="{% static 'img/googleLogo.png' %}" alt="googlelogo"></a>
+                        <a href="https://www.microsoft.com/en-us/"><img src="{% static 'img/microsoftLogo.png' %}" alt="microsoftlogo"></a>
+                        <a href="https://www.airbnb.com/"><img src="{% static 'img/airbnbLogo.png' %}" alt="airbnblogo"></a>
                         <a href="#"><img src="{% static 'img/facebookLogo.png' %}" alt="facebooklogo"></a>
                         <a href="#"><img src="{% static 'img/spotifyLogo.png' %}" alt="spotifylogo"></a>
                     </div>
