@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+        
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <title>Startup Website {% block title %} {% endblock %}</title>
+</head>
+<body>
+
+{% include 'partials/__header__.html' %}
+
+{% block content %}
+{% endblock %}
+
+{% include 'partials/__footer__.html' %}
+
+
+<script src="{% static 'JS/index.js' %}"></script>
+
+</body>
+
+</html>

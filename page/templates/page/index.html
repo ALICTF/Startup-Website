@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <title>Startup Website</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div>
+                <div>
+                    <nav>
+                        <div>
+                            <a href="{% url 'page:home' %}">
+                                <img class="logoResponsive" src="{% static 'img/Logo.png' %}" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="hamMenu"><a href="{% url 'page:home' %}"><i class="fa-solid fa-bars fa-2xl"></i></a></div>
+                        <div class="navItemResponsive">
+                            <ul class="navItem">
+                                {% if user.is_authenticated %}
+                                <li><a href="{% url 'account:logout' %}">Logout</a><a href="{% url 'admin:login' %}">{{ user }}</a></li>
+                                {% else %}
+                                <li><a href="{% url 'account:login' %}">login</a><a href="{% url 'account:signup' %}">Signup</a></li>
+                                {% endif %}
+                                <li><a href="{% url 'page:contact' %}">contact</a></li>
+                                <li><a href="{% url 'page:services' %}">Services</a></li>
+                                <li><a href="{% url 'page:portfolio' %}">Portfolio</a></li>
+                                <li><a href="{% url 'page:home' %}">Home</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="headerDown">
+                    <div class="headerContent">
+                        <h3 class="headerh3">Welcome</h3>
+                        <h1 class="headerh1">Lorem ipsum dolor sit amet consectetur</h1>
+                        <p class="headerp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic
+                            quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus
+                            iste?</p>
+                        <button>Explore</button>
+                    </div>
+                    <div>
+                        <img src="{% static 'img/headerPic.png' %}" alt="groupPic" width="550px" height="350px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Content Section 1 -->
+    <section>
+        <div class="container">
+            <div class="Section1">
+                <div class="section1Content">
+                    <h4 class="sectionh4">Partners</h4>
+                    <h2 class="sectionh2">Lorem, ipsum dolor</h2>
+                    <p class="sectionp">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+                <div>
+                    <div class="logoSection">
+                        <a href="https://www.google.com/"><img src="{% static 'img/googleLogo.png' %}" alt="googlelogo"></a>
+                        <a href="https://www.microsoft.com/en-us/"><img src="{% static 'img/microsoftLogo.png' %}" alt="microsoftlogo"></a>
+                        <a href="https://www.airbnb.com/"><img src="{% static 'img/airbnbLogo.png' %}" alt="airbnblogo"></a>
+                        <a href="#"><img src="{% static 'img/facebookLogo.png' %}" alt="facebooklogo"></a>
+                        <a href="#"><img src="{% static 'img/spotifyLogo.png' %}" alt="spotifylogo"></a>
+                    </div>
+                    <div class="buttonSectionDiv">
+                        <button class="buttonSection">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 2 -->
+    <section>
+        <div class="container">
+            <div class="Section2">
+                <div>
+                    <img src="{% static 'img/Section2img.png' %}" alt="groupPic2" width="500px" height="350px">
+                </div>
+                <div class="Section2content">
+                    <h2 class="section2h2">Lorem ipsum dolor sit amet consectetur</h2>
+                    <p class="section2p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic
+                        quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus
+                        iste?</p>
+                    <button class="buttonSection2">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 3 -->
+    <section>
+        <div class="container">
+            <div class="Section3">
+
+                <div class="Section2content">
+                    <h2 class="section2h2">Lorem ipsum dolor sit amet consectetur</h2>
+                    <p class="section2p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic
+                        quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus
+                        iste?</p>
+                    <button class="buttonSection2">Learn More</button>
+                </div>
+                <div>
+                    <img src="{% static 'img/Section3img.png' %}" alt="groupPic2" width="500px" height="450px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section>
+        <div class="container">
+            <div class="cardSection">
+                <div class="cardContent">
+                    <h4 class="cardh4">Team</h4>
+                    <h2 class="cardh2">Our Talents</h2>
+                    <p class="cardp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit deleniti officia
+                        odio vero.</p>
+                </div>
+                <div class="card">
+                    {% for team in teams %}
+                    <div class="cardinner">
+                        <div class="cardimginner">
+                            <img class="imginnercard" src="{{ team.image.url }}" alt="card1">
+                        </div>
+                        <div class="cardContentInner">
+                            <h4>{{ team.get_full_name|title }}</h4>
+                            <p>{{ team.job }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="cardSectionButton">
+                    <button class="buttonCard">View Team</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include 'partials/__footer__.html' %}
+
+</body>
+</html>

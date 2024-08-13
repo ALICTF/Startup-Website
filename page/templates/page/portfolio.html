@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Content Section -->
+    <section>
+        <div class="container">
+            <div class="sampleContent">
+                <h2 >Portfolio</h2>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="samplesImg">
+                {% for portfolio in portfolios %}
+                    <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}">
+                {% endfor %}
+            </div>
+            <div class="buttonSectionDiv">
+                <button class="buttonSection">Learn More</button>
+            </div>
+        </div>
+    </section>
+{% endblock %}

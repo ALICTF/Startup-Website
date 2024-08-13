@@ -1,0 +1,30 @@
+    {% load static %}
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div>
+                <nav>
+                    <div>
+                        <a href="#">
+                            <img class="logoResponsive" src="{% static 'img/Logo.png' %}" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="hamMenu"><a href="{% url 'page:home' %}"><i class="fa-solid fa-bars fa-2xl"></i></a></div>
+                    <div class="navItemResponsive">
+                        <ul class="navItem">
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'account:logout' %}">Logout</a><a href="{% url 'admin:login' %}">{{ user }}</a></li>
+                            {% else %}
+                            <li><a href="{% url 'account:login' %}">login/Signup</a>
+                            {% endif %}
+                            <li><a href="{% url 'page:contact' %}">contact</a></li>
+                            <li><a href="{% url 'page:services' %}">Services</a></li>
+                            <li><a href="{% url 'page:portfolio' %}">Portfolio</a></li>
+                            <li><a href="{% url 'page:home' %}">Home</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
