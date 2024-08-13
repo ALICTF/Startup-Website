@@ -12,7 +12,10 @@ class CustomAdminPanel(UserAdmin):
     list_per_page = 20
     search_fields = ('username', )
     model = CustomUser
+    add_fieldsets = UserAdmin.add_fieldsets + (
+        (None, {'fields': ['gender', 'job']}),
+    )
     fieldsets = UserAdmin.fieldsets + (
-        ('Other Fields', {'fields': ['gender']}),
-        # ('Image', {'fields': ['image']}),
+        ('Other Fields', {'fields': ['gender', 'job']}),
+        ('Image', {'fields': ['image']}),
     )

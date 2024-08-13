@@ -1,3 +1,5 @@
+import random
+
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
@@ -16,11 +18,11 @@ class CustomUser(AbstractUser):
         return self.username
     
     def save(self, *args, **kwargs):
-        if self.image is None:
+        if self.image == '':
             if self.gender == 'M':
-                self.image = '/static/img/card2.png'
+                self.image = random.choice(['defualt/card2.png', 'defualt/card4.png'])
             else:
-                self.image = '/static/img/card1.png'
+                self.image = random.choice(['defualt/card1.png', 'defualt/card3.png'])
         return super().save(*args, **kwargs)
 
 
