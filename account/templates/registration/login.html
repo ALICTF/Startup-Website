@@ -19,7 +19,8 @@
                         <i></i>
                         <p>or use your account</p>
                         <form action="{% url 'account:login' %}" method="POST">
-                            <input type="email" placeholder="Email" name="username">
+                            {% csrf_token %}
+                            <input type="text" placeholder="Username" name="username">
                             <input type="password" placeholder="password" name="password">
                             <a href="#"><p>Forgot your password ?</p></a>
                             <button type="submit">Sign in</button>
@@ -44,17 +45,19 @@
                     <h3>Sign up</h3>
                     <span class="close">&times;</span>
                 </div>
-            <form action="./login.html" method="post">
-                    <input type="text" placeholder="Enter Your Username" >
-                    <input type="email" placeholder="Enter Your Email" >
-                    <input type="password" placeholder="Enter Your password">
-                    <input type="password" placeholder="Repeat Your password">
+            <form action="{% url 'account:signup' %}" method="POST">
+                {% csrf_token %}
+                    <input type="text" placeholder="Enter Your Username" name="username">
+                    <input type="text" placeholder="Enter Your Job" name="job">
+                    <input type="email" placeholder="Enter Your Email" name="email">
+                    <input type="password" placeholder="Enter Your password" name="password1">
+                    <input type="password" placeholder="Repeat Your password" name="password2">
                     <p>select your gender :</p>
                     <div class="genderDiv">                    
                         <label for="genderM">Male</label>
-                        <input type="radio" name="gender" id="genderM">
+                        <input type="radio" name="gender" id="genderM" value="M">
                         <label for="genderF">Female</label>
-                        <input type="radio" name="gender" id="genderF">
+                        <input type="radio" name="gender" id="genderF" value="W">
                     </div> 
                     <button type="submit">Sign in</button>
             </form>
