@@ -23,7 +23,7 @@ class CustomUser(AbstractUser):
         if self.image == '':
             if self.gender == 'M':
                 self.image = random.choice(['defualt/card2.png', 'defualt/card4.png'])
-            else:
+            elif self.gender == 'W':
                 self.image = random.choice(['defualt/card1.png', 'defualt/card3.png'])
         return super().save(*args, **kwargs)
 

@@ -6,7 +6,7 @@ class SignupForm(UserCreationForm):
     
     class Meta:
         model = get_user_model()
-        fields = UserCreationForm.Meta.fields
+        fields = ('username', 'email', 'job', 'gender')
         
 
 class ChangeUserForm(UserChangeForm):
